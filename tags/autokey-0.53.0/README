@@ -1,0 +1,8 @@
+$Id$
+
+Read INSTALL for installation instructions, and see the end of this
+document for known problems.
+
+Autokey is a text replacement tool anologous to the Mac and Windows
+utilities Textpander, Texter and AutoHotKey, but for X11
+on Linux.
