@@ -1,0 +1,100 @@
+#summary Frequently Asked Questions about AutoKey
+#labels Featured
+
+=== What are the dependency packages for AutoKey? ===
+On Debian or Ubuntu you can get the dependencies by typing:
+
+{{{
+apt-get install python-xlib python-configobj python-notify
+}}}
+
+Note that if you installed AutoKey from a .deb or using apt-get, these dependencies will automatically be installed for you.
+
+=== What is the license of AutoKey ? ===
+AutoKey is published under GNU GPL v3 license.
+
+=== Does AutoKey work with scripts which were written with the popular AutoHotKey Windows application? ===
+Not at the moment. AutoKey's built-in Python scripting is arguably much more powerful than the AHK language and makes it possible to do many of the things that AutoHotKey scripts can do on Windows, in addition to some things AHK doesn't support (such as arrays).
+
+Some future version of AutoKey may provide an import tool to migrate AutoHotKey scripts.
+
+=== Is AutoKey available on Microsoft Windows? ===
+No. There are similar alternatives on Windows like [http://www.autohotkey.com/ AutoHotKey]
+
+=== Can AutoKey launch programs or commands via pressing keys or a sequence of keys? What is the syntax for it? ===
+Yes it can. For example if you want to type "fire" to launch Firefox in any application like OpenOffice:
+  # Phase description: Run Firefox
+  # Phrase Contents: $(exec output=false&command=firefox)
+  # Abbreviation: fire
+  # Remove Typed abbreviation: True (i.e. Selected)
+  # Trigger when Typed as part of a word: True (i.e. Selected)
+  # Trigger immediately (don't require a trigger character): True (i.e. Selected)
+
+Now when you type fire anywhere, Firefox will be launched.
+
+=== Can AutoKey launch programs or commands via pressing keys or sequence of keys and then get the output of that command as the phrase content? What is the syntax for it? ===
+Yes it can. For example if are typing in a text editor and you want to get the current system date pasted whenever you type in dt then you can do the following
+
+  # Phase description : Insert Current Date
+  # Phrase Contents : $(exec output=true&command=date)
+  # Abbreviation: dt
+  # Remove Typed abbreviation : True(i.e. Selected)
+  # Trigger when Typed as part of a word : True(i.e. Selected)
+  # Trigger immediately (don't require a trigger character) : True(i.e. Selected)
+
+Now when you type dt anywhere, it will replace the text dt with the current system date.
+
+=== What are the formatting strings used to specify the format for the date macro? ===
+AutoKey uses the standard ANSI formatting provided in the Python datetime module:
+
+{{{
+Directive     Meaning
+%a     Locale’s abbreviated weekday name.
+%A     Locale’s full weekday name.
+%b     Locale’s abbreviated month name.
+%B     Locale’s full month name.
+%c     Locale’s appropriate date and time representation.
+%d     Day of the month as a decimal number [01,31].
+%f     Microsecond as a decimal number [0,999999], zero-padded
+%H     Hour (24-hour clock) as a decimal number [00,23].
+%I     Hour (12-hour clock) as a decimal number [01,12].
+%j     Day of the year as a decimal number [001,366].
+%m     Month as a decimal number [01,12].
+%M     Minute as a decimal number [00,59].
+%p     Locale’s equivalent of either AM or PM
+%S     Second as a decimal number [00,61].
+%U     Week number of the year (Sunday as the first day of the week)
+%w     Weekday as a decimal number [0(Sunday),6].
+%W     Week number of the year (Monday as the first day of the week)
+%x     Locale’s appropriate date representation.
+%X     Locale’s appropriate time representation.
+%y     Year without century as a decimal number [00,99].
+%Y     Year with century as a decimal number.
+%z     UTC offset in the form +HHMM or -HHMM
+%Z     Time zone name (empty string if the object is naive).
+%%     A literal '%' character.
+}}}
+
+=== Is there a way to run AutoKey in a daemon mode that is in background and without a tray icon or from a shell script? ===
+Run 'autokey' with an & while making sure that the preference (Settings->Advanced Settings) "Show a tray icon" in unselected.
+
+Now when you want to see the Configuration window again while Autokey is running in in daemon mode, you can press the Special Hotkey which you assigned in the Settings->Advanced Settings->Special Hotkeys->Use a hotkey to show configuration window.
+
+=== Can special keys like Alt, Ctrl, F1, Enter etc be used in my Phrase Contents ? ===
+
+Yes - check the [SpecialKeys table for special keys]
+
+=== Can I temporarily suspend/resume AutoKey? ===
+To toggle Autokey from suspend/resume, use the hotkey which you have specified in Settings -> Advanced Settings -> Special Hotkeys->Use a hotkey to toggle expansions. Alternatively this can be controlled from the tray icon's popup menu, or from the Settings menu in the configuration window.
+
+=== What are the trigger characters? ===
+The default trigger characters are dependent on your locale. They are any characters that are not normally considered part of a word. For English locales, these are characters like Enter (Return), Tab, Space and punctuation, among others.
+
+=== Where is my configuration information stored? Can I move those to other machines? ===
+Starting version 0.53 this information is stored in the user's home directory under the folder .config/autokey/autokey.bin
+
+=== Does AutoKey work on Ubuntu 9.04 (Jaunty Jackalope)? ===
+Yes, in most cases it should work fine. See the [Troubleshooting] page for more information.
+
+=== I like this project and would like to donate some money. Where do I donate? ===
+Thanks for your support.You can use the following link to donate [https://sourceforge.net/donate/index.php?group_id=216191 Donate]
