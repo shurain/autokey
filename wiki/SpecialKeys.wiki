@@ -1,0 +1,32 @@
+#summary Mappings for special keys
+
+= Introduction =
+
+The below table lists all the names used for special keys (for use with keyboard.send_key or keyboard.send_keys).
+
+
+|| *Keys* || *String* ||
+|| LEFT || `<`left`>` ||
+|| RIGHT || `<`right`>` ||
+|| UP || `<`up`>` ||
+|| DOWN || `<`down`>` ||
+|| BACKSPACE || `<`backspace`>` ||
+|| TAB || `<`tab`>` ||
+|| RETURN\ENTER || `<`enter`>` ||
+|| SPACE || (space character) ||
+|| CONTROL || `<`ctrl`>` ||
+|| ALT || `<`alt`>` ||
+|| ALT_GR || `<`alt_gr`>` ||
+|| SHIFT || `<`shift`>` ||
+|| SUPER || `<`super`>` ||
+|| CAPSLOCK || `<`capslock`>` ||
+|| ESCAPE || `<`escape`>` ||
+|| INSERT || `<`insert`>` ||
+|| DELETE || `<`delete`>` ||
+|| HOME || `<`home`>` ||
+|| END || `<`end`>` ||
+|| PAGE_UP || `<`page_up`>` ||
+|| PAGE_DOWN || `<`page_down`>` ||
+|| F1-F12 || `<`f1`>`-`<`f12`>` ||
+
+To combine two keys use a + sign - e.g. to press Control+Esc use `<`ctrl`>`+`<`escape`>`
