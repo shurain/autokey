@@ -12,7 +12,7 @@ If you installed from a .deb or using apt-get, and had installed a previous vers
 
 {{{
 sudo apt-get --purge remove autokey
-sudo rm -Rf /usr/local/lib/python`*`/dist-packages/autokey`*`
+sudo rm -Rf /usr/local/lib/python*/dist-packages/autokey*
 sudo rm /usr/local/bin/autokey
 }}}
 
