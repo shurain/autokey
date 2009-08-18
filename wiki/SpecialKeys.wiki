@@ -12,7 +12,7 @@ The below table lists all the names used for special keys (for use with keyboard
 || DOWN || `<`down`>` ||
 || BACKSPACE || `<`backspace`>` ||
 || TAB || `<`tab`>` ||
-|| RETURN\ENTER || `<`enter`>` ||
+|| RETURN/ENTER || `<`enter`>` ||
 || SPACE || (space character) ||
 || CONTROL || `<`ctrl`>` ||
 || ALT || `<`alt`>` ||
@@ -20,6 +20,8 @@ The below table lists all the names used for special keys (for use with keyboard
 || SHIFT || `<`shift`>` ||
 || SUPER || `<`super`>` ||
 || CAPSLOCK || `<`capslock`>` ||
+|| NUMLOCK || `<`numlock`>` ||
+|| SCROLL_LOCK || `<`scroll_lock`>` ||
 || ESCAPE || `<`escape`>` ||
 || INSERT || `<`insert`>` ||
 || DELETE || `<`delete`>` ||
@@ -28,5 +30,8 @@ The below table lists all the names used for special keys (for use with keyboard
 || PAGE_UP || `<`page_up`>` ||
 || PAGE_DOWN || `<`page_down`>` ||
 || F1-F12 || `<`f1`>`-`<`f12`>` ||
+|| PRINT_SCREEN || `<`print_screen`>` ||
+|| PAUSE || `<`pause`>` ||
+|| MENU || `<`menu`>` ||
 
 To combine two keys use a + sign - e.g. to press Control+Esc use `<`ctrl`>`+`<`escape`>`
