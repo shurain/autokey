@@ -4,8 +4,14 @@
 === What are the dependency packages for AutoKey? ===
 On Debian or Ubuntu you can get the dependencies by typing:
 
+KDE Version:
 {{{
 apt-get install python-xlib python-qt4 python-kde4 python-qscintilla2
+}}}
+
+GTK Version:
+{{{
+apt-get install python-gtk2 python-gtksourceview2 python-glade2 python-xlib python-notify
 }}}
 
 Note that if you installed AutoKey from a .deb or using apt-get, these dependencies will automatically be installed for you.
