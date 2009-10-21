@@ -25,7 +25,7 @@ This script shows a simple list menu, grabs the chosen option and sends it via k
 {{{
 choices = ["something", "something else", "a third thing"]
 
-retCode, choice = dialog.combo_menu(choices)
+retCode, choice = dialog.list_menu(choices)
 if retCode == 0:
     keyboard.send_keys("You chose " + choice)
 }}}
