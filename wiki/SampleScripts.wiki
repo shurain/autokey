@@ -55,3 +55,39 @@ else:
     
 keyboard.send_keys("I've been run %d times!" % store.get_value("runs"))
 }}}
+
+===Create new abbreviation===
+
+This script creates a new phrase with an associated abbreviation from the current contents of the X mouse selection (although you could easily change it to use the clipboard instead by using clipboard.get_clipboard()).
+
+{{{
+import time
+time.sleep(0.25)
+# The sleep seems to be necessary to avoid lockups
+contents = clipboard.get_selection()
+retCode, abbr = dialog.input_dialog("New Abbreviation", "Choose an abbreviation for the new phrase")
+if retCode == 0:
+    if len(contents) > 20:
+        title = contents[0:17] + "..."
+    else:
+        title = contents
+    folder = engine.get_folder("My Phrases")
+    engine.create_abbreviation(folder, title, abbr, contents)
+}}}
+
+===Create new phrase===
+
+This is similar to the above script, but just creates the phrase without an abbreviation.
+
+{{{
+import time
+time.sleep(0.25)
+# The sleep seems to be necessary to avoid lockups
+contents = clipboard.get_selection()
+if len(contents) > 20:
+    title = contents[0:17] + "..."
+else:
+    title = contents
+folder = engine.get_folder("My Phrases")
+engine.create_phrase(folder, title, contents)
+}}}
