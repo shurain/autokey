@@ -1,0 +1,20 @@
+Source: autokey
+Section: kde
+Priority: optional
+Maintainer: Chris Dekter <cdekter@gmail.com>
+Build-Depends: python (>= 2.6), cdbs (>= 0.4.49), debhelper (>= 6)
+Build-Depends-indep: python-central (>= 0.6.0)
+Standards-Version: 3.8.3
+XS-Python-Version: >= 2.6
+Homepage: http://autokey.googlecode.com/
+
+Package: autokey
+Architecture: all
+Depends: ${python:Depends}, ${misc:Depends}, python-kde4, python-qt4, python-qscintilla2, python-xlib, wmctrl
+XB-Python-Version: ${python:Versions}
+Description: desktop automation utility
+ AutoKey is a desktop automation utility for Linux and X11. It allows the 
+ automation of virtually any task by responding to typed abbreviations and 
+ hotkeys. It offers a full-featured GUI that makes it highly accessible for 
+ novices, as well as a scripting interface offering the full flexibility and 
+ power of the Python language.
