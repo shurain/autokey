@@ -6,30 +6,10 @@
 This page contains solutions to problems frequently experienced by users of AutoKey.
 
 ----
-
-=== AutoKey will not start properly - the icon does not appear and if I run it from the terminal, there is no output. ===
-If you installed from a .deb or using apt-get, and had installed a previous version of AutoKey manually (using sudo python setup.py install), you will need to clean up your system of these conflicting versions as follows:
-
-{{{
-sudo apt-get --purge remove autokey
-sudo rm -Rf /usr/local/lib/python*/dist-packages/autokey*
-sudo rm /usr/local/bin/autokey
-}}}
-
-Then install again using apt-get or the from .deb (don't install it any other way).
-
-=== After I upgraded to the latest version, when I start AutoKey I get the message "ImportError: No module named configurationmanager" ===
-You will need to repair your configuration file as follows:
-
-  # Open your configuration file (autokey.bin) in a text editor.
-  # Replace all occurences of iconfigurationmanager with iautokey.configurationmanager
-  # Replace all occurences of iphrase with iautokey.phrase
-  # Save
-
 === How do I know which interface to use? (Settings->Advanced Settings->Device Interface) ===
 When you start AutoKey for the first time, it attempts to choose the best possible option for you. For most people, this should work fine. As the dialog states, only change the setting if AutoKey is not responding to hotkeys and abbreviations. In that case, you can simply try the various options and see which works best for you. Note that some of the interfaces don't work at all, depending on your distribution. To summarise:
 
-X Record: Will work in any distribution using X.org server prior to version 1.6. E.g. Ubuntu Jaunty upgrades the server to v1.6, and as a result XRecord will not work.
+X Record: Will work in any distribution using X.org server prior to version 1.6. E.g. Ubuntu Jaunty upgrades the server to v1.6, and as a result XRecord will not work. The problem is fixed in Lucid (10.04).
 X EvDev: Should work in most cases, except if you are using 'exotic' hardware such as Bluetooth keyboards (or any keyboard device that does not use the EvDev X driver).
 AT-SPI: Only works when the active window is a GTK-based application (including Firefox 3). Also requires certain configuration items in your Gnome environment to be enabled (see below).
 
@@ -58,5 +38,6 @@ AutoKey only recognises layout switches that take place within the X Server. The
 The default hotkey for displaying the configuration window is Control+K. If this does not work, you can force the configuration window to be shown at startup by running AutoKey with the -c switch:
 
 {{{ 
-autokey -c 
+autokey-gtk -c (GTK version)
+autokey-qt -c (KDE version)
 }}}
