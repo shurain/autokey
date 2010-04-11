@@ -20,9 +20,7 @@ Note that if you installed AutoKey from a .deb or using apt-get, these dependenc
 AutoKey is published under GNU GPL v3 license.
 
 === Does AutoKey work with scripts which were written with the popular AutoHotKey Windows application? ===
-Not at the moment. AutoKey's built-in Python scripting is arguably much more powerful than the AHK language and makes it possible to do many of the things that AutoHotKey scripts can do on Windows, in addition to some things AHK doesn't support (such as arrays).
-
-Some future version of AutoKey may provide an import tool to migrate AutoHotKey scripts.
+No. AutoKey's built-in Python scripting is arguably much more powerful than the AHK language and makes it possible to do many of the things that AutoHotKey scripts can do on Windows, in addition to some things AHK doesn't support.
 
 === Is AutoKey available on Microsoft Windows? ===
 No. There are similar alternatives on Windows like [http://www.autohotkey.com/ AutoHotKey]
@@ -39,7 +37,7 @@ To toggle Autokey from suspend/resume, use the hotkey which you have specified i
 The default trigger characters are dependent on your locale. They are any characters that are not normally considered part of a word. For English locales, these are characters like Enter (Return), Tab, Space and punctuation, among others.
 
 === Where is my configuration information stored? Can I move those to other machines? ===
-Starting version 0.53 this information is stored in the user's home directory under the folder .config/autokey/autokey.bin
+This information is stored in the user's home directory under the folder .config/autokey/autokey.json
 
 === Does AutoKey work on Ubuntu 9.04 (Jaunty Jackalope)? ===
 Yes, in most cases it should work fine. See the [Troubleshooting] page for more information.
