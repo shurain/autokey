@@ -39,8 +39,11 @@ The default trigger characters are dependent on your locale. They are any charac
 === Where is my configuration information stored? Can I move those to other machines? ===
 This information is stored in the user's home directory under the folder .config/autokey/autokey.json
 
+=== Window filters don't seem to work on KDE applications ===
+To use window filters with KDE applications, you will need to use the name of the application's process as the value to filter on. For example, for Kate, the process is called 'kate', and this is the value you would filter on.
+
 === Does AutoKey work on Ubuntu 9.04 (Jaunty Jackalope)? ===
 Yes, in most cases it should work fine. See the [Troubleshooting] page for more information.
 
 === I like this project and would like to donate some money. Where do I donate? ===
-Thanks for your support.You can use the following link to donate [https://sourceforge.net/donate/index.php?group_id=216191 Donate]
+Thanks for your support.You can use the following link to donate [https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=L333CPRZ6J8JC Donate]
