@@ -5,9 +5,21 @@
 
 This page contains some very basic script examples to demonstrate the capabilities of AutoKey's scripting service.
 
-For specific details on the custom functions available to AutoKey scripts, see the [http://autokey.sf.net/apidoc API reference].
+For specific details on the custom functions available to AutoKey scripts, see the [http://autokey.googlecode.com/svn/trunk/doc/scripting/index.html API reference].
 
 = Scripts =
+
+===Display Active Window Information===
+Displays the information of the active window after 2 seconds
+
+{{{
+import time
+time.sleep(2)
+winTitle = window.get_active_title()
+winClass = window.get_active_class()
+dialog.info_dialog("Window information", 
+          "Active window information:\\nTitle: '%s'\\nClass: '%s'" % (winTitle, winClass))
+}}}
 
 ===Insert Current Date/Time===
 
