@@ -10,8 +10,7 @@ This page contains solutions to problems frequently experienced by users of Auto
 Start by opening a terminal. Then start AutoKey with the debug logging turned on:
 
 {{{
-autokey-gtk -l (Gnome version)
-autokey-qt -l (KDE version)
+autokey-gtk -l
 }}}
 
 Next, perform whatever action is causing the problem. Lastly, capture the output and include it with your posting.
@@ -41,13 +40,5 @@ Ensure that the AutoKey EvDev daemon is running by running the following command
 sudo invoke-rc.d autokey restart 
 }}}
 
-=== AutoKey mixes up some characters when it sends my phrases. I am using a non-US keyboard layout with a hotkey or panel applet to switch between layouts. ===
-AutoKey only recognises layout switches that take place within the X Server. The hotkey/panel applet layout switchers do a 'soft' switch which does not actually change the underlying X keymap. Aside from this, the methods for switching are so varied and inconsistent, it would be impossible to cater for them all. If you wish to use multiple keyboard layouts, you will need to switch between them using setxkbmap. You could set up a hotkey within AutoKey to run setxkbmap and perform the switching. Note that using setxkbmap to set the layout will disable all other methods (hotkey/panel applet).
-
-=== I disabled the tray icon, and I don't know the hotkey for displaying the configuration window. ===
-The default hotkey for displaying the configuration window is Control+K. If this does not work, you can force the configuration window to be shown at startup by running AutoKey with the -c switch:
-
-{{{ 
-autokey-gtk -c (GTK version)
-autokey-qt -c (KDE version)
-}}}
+=== I disabled the notification icon, and I don't know the hotkey for displaying the configuration window. ===
+Simply start AutoKey again while it is already running, and this will cause the configuration window to be shown.
