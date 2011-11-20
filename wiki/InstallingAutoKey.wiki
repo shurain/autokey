@@ -1,3 +1,4 @@
+#summary This is the Installation manual for installing from source code or repository.
 #labels Featured
 <h1>Installing AutoKey</h1>
 <br />
