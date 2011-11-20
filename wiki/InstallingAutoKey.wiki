@@ -374,3 +374,6 @@ Now your newly converted and backed up scripts and phrases can be copied, moved,
 </li>
 </ol>
 </p><p>
+<br />
+Original author was Keith W Daniels, November 2011.
+</p>
