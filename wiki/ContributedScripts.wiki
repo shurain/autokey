@@ -2,7 +2,7 @@
 
 = Introduction =
 
-This page contains user contributed scripts to demonstrate the *advanced* capabilities of AutoKey's scripting service.
+This page contains user contributed scripts to demonstrate the *advanced* capabilities of AutoKey`'`s scripting service.
 
 For specific details on the custom functions available to AutoKey scripts, see the [http://autokey.googlecode.com/svn/trunk/doc/scripting/index.html API reference].
 
@@ -25,6 +25,7 @@ if retCode == 0:
 }}}
 
 [ContributedScripts#Table_Of_Contents]
+
 === Health Potion Drinker ===
 
 *Author*: [http://www.bowierocks.com Itscool - Al]
