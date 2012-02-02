@@ -2,9 +2,9 @@
 
 = Introduction =
 
-This page contains user contributed scripts to demonstrate the *advanced* capabilities of AutoKey`'`s scripting service.
+This page contains user contributed scripts to demonstrate the *advanced* capabilities of !AutoKey's scripting service.
 
-For specific details on the custom functions available to AutoKey scripts, see the [http://autokey.googlecode.com/svn/trunk/doc/scripting/index.html API reference].
+For specific details on the custom functions available to !AutoKey scripts, see the [http://autokey.googlecode.com/svn/trunk/doc/scripting/index.html API reference].
 
 == Table Of Content ==
 <wiki:toc>
@@ -33,15 +33,15 @@ if retCode == 0:
 *Description*: I created this Autokey script to help me manage the drinking of health potions. The game lacks a mechanism to quickly imbibe a potion without some difficulty. It is far easier to hit one key that does it for you. In the case of this script, you are also taken back to safe zone if you are out of health potions. All you have to do is make sure you have pot in all of your slots. It will work even if you don’t have pot in all of the slots. For use with the flash client at [http://www.realmofthemadgod.com Realm of the Mad God].
 
 {{{
-if not store.has_key(“heal”):
-# set the key ‘persistant variable’ if we don’t have it already
-store.set_value(“heal”,1)
+if not store.has_key("heal"):
+# set the key 'persistant variable' if we don’t have it already
+store.set_value("heal",1)
 
-pot = store.get_value(“heal”)
+pot = store.get_value("heal")
 if pot > 8:
-# also send us back to the nexus
-pot = 1
-keyboard.send_key(“<f5>”)
+  # also send us back to the nexus
+  pot = 1
+  keyboard.send_key("<f5>")
 
 #do the pot thing
 output = str(pot)
@@ -50,7 +50,7 @@ keyboard.send_key(output)
 
 pot = pot + 1
 
-store.set_value(“heal”,pot)
+store.set_value("heal",pot)
 }}}
 [http://code.google.com/p/autokey/wiki/ContributedScripts Table Of Content]
 
@@ -99,7 +99,7 @@ store.set_value("mana",mana)
 
 *Author*: [http://www.bowierocks.com Itscool - Al]
 
-*Description*: I created this Autokey script will help you manage drinking health potions in the top four inventory slots. Additionally `it’ll` generate a random yell asking for some type of healing support. For use with the flash client at [http://www.realmofthemadgod.com Realm of the Mad God].
+*Description*: I created this Autokey script will help you manage drinking health potions in the top four inventory slots. Additionally it'll generate a random yell asking for some type of healing support. For use with the flash client at [http://www.realmofthemadgod.com Realm of the Mad God].
 
 {{{
 from random import randrange
@@ -166,10 +166,10 @@ keyboard.send_keys("today")
 #
 #start firefox or switch to firefox
 import subprocess
-command = ‘wmctrl -l’
+command = 'wmctrl -l'
 output = system.exec_command(command, getOutput=True)
 
-if ‘Firefox’ in output:
+if 'Firefox' in output:
     window.activate(‘Firefox’,switchDesktop=True)
 
 else:
@@ -182,7 +182,7 @@ else:
 
 *Author*: Jack
 
-*Description*: several actions to go on the same key… i have this on this script sends `‘^+’` when in Firefox or Chromium to do a zoom in. when i`’`m reading RSS feeds in Akregator, it sends `‘=’` to move to the next unread item.
+*Description*: several actions to go on the same key… i have this on this script sends `'^+'` when in Firefox or Chromium to do a zoom in. when i'm reading RSS feeds in Akregator, it sends `'='` to move to the next unread item.
 
 {{{
 #
@@ -279,40 +279,40 @@ import os
 ##Fails if Loading file to print takes longer than the second delay 
 ## Open the File menu 
 ## (can’t use <ctrl>+p because that’s the hotkey) 
-keyboard.send_keys(“<alt>+f”) 
+keyboard.send_keys("<alt>+f") 
 time.sleep(1.0) 
 ## Select Print 
-keyboard.send_keys(“p”) 
+keyboard.send_keys("p") 
 time.sleep(2.0) 
 ## tab to the printer selection list, then to the top of the list 
 ## which is the Print to File selection 
-keyboard.send_keys(“<tab><home>”) 
+keyboard.send_keys("<tab><home>") 
 time.sleep(2.0) 
 ## tab to the file name field and enter the print queue directory path 
-keyboard.send_keys(“<tab>pq/”) 
+keyboard.send_keys("<tab>pq/") 
 ## Set path to print queue 
-path = os.getenv(“HOME”) + ‘/pq’ 
+path = os.getenv("HOME") + '/pq' 
 ## Get all the files in the print queue in a list 
 dirList=os.listdir(path) 
 ## And sort it in reverse order 
 ## So the largest numbered file is first 
 dirList.sort(reverse=True) 
-## If there aren’t any files then 
+## If there aren't any files then 
 ## Set last file to 0 
 ## else, set it to the last file 
 if len(dirList) == 0: 
-   output = ’0′ 
+   output = '0' 
 else: 
    output = dirList[0] 
 ## Increment the file number 
 output = str(int(output) + 1) 
-## If it’s less than 2 characters long, 
+## If it's less than 2 characters long, 
 ## Left pad it with a zero 
 ## To maintain the sorting order 
 if len(output) < 2: 
-   output = ’0′ + output 
+   output = '0' + output 
 ## complete the file name field in the print dialog 
-## But don’t send an enter so the user can select 
+## But don't send an enter so the user can select 
 ## options before printing 
 keyboard.send_keys(output)
 }}}
