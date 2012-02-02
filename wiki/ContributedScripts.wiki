@@ -6,18 +6,10 @@ This page contains user contributed scripts to demonstrate the *advanced* capabi
 
 For specific details on the custom functions available to AutoKey scripts, see the [http://autokey.googlecode.com/svn/trunk/doc/scripting/index.html API reference].
 
-= Scripts =
-  #[ContributedScripts#Choose_Browser_On_Link_Selection] Choose Browser On Link Selection]
-  #[ContributedScripts#Health_Potion_Drinker Health Potion Drinker]
-  #[ContributedScripts#Ask_For_Assistance Ask For Assistance]
-  #[ContributedScripts#Ask_For_A_Cleric Ask For A Cleric]
-  #[ContributedScripts#Gnome_Screenshot Gnome Screenshot]
-  #[ContributedScripts#Switch_Or_Start_Firefox Switch Or Start Firefox]
-  #[ContributedScripts#RSS_Zoomer RSS Zoomer]
-  #[ContributedScripts#Move_Active_Window Move Active Window]
-  #[ContributedScripts#Offline_Print_Queue Offline Print Queue]
+== Table Of Content ==
+<wiki:toc>
 
-= Choose Browser On Link Selection =
+=== Choose Browser On Link Selection ===
 
 *Discovered at*: [http://www.linuxjournal.com/content/autokey-desktop-automation-utility-linux Linux Journal]
 
@@ -25,18 +17,22 @@ For specific details on the custom functions available to AutoKey scripts, see t
 
 *Description*: This Autokey script takes a highlighted url from any program and triggers a selection of browsers from which you can choose to load the page.
 
-{{{choices = ["konqueror", "firefox", "chrome"]
+{{{
+choices = ["konqueror", "firefox", "chrome"]
 retCode, choice = dialog.list_menu(choices)
 if retCode == 0:
-  system.exec_command(choice + " " + clipboard.get_selection())}}}
----
-= Health Potion Drinker =
+  system.exec_command(choice + " " + clipboard.get_selection())
+}}}
+
+[ContributedScripts#Table_Of_Contents]
+=== Health Potion Drinker ===
 
 *Author*: [http://www.bowierocks.com Itscool - Al]
 
 *Description*: I created this Autokey script to help me manage the drinking of health potions. The game lacks a mechanism to quickly imbibe a potion without some difficulty. It is far easier to hit one key that does it for you. In the case of this script, you are also taken back to safe zone if you are out of health potions. All you have to do is make sure you have pot in all of your slots. It will work even if you don’t have pot in all of the slots. For use with the flash client at [http://www.realmofthemadgod.com Realm of the Mad God].
 
-{{{if not store.has_key(“heal”):
+{{{
+if not store.has_key(“heal”):
 # set the key ‘persistant variable’ if we don’t have it already
 store.set_value(“heal”,1)
 
@@ -53,16 +49,18 @@ keyboard.send_key(output)
 
 pot = pot + 1
 
-store.set_value(“heal”,pot)}}}
-[#Scripts Back to Scripts List]
+store.set_value(“heal”,pot)
+}}}
+[ContributedScripts#Table_Of_Contents]
 
-= Ask For Assistance =
+=== Ask For Assistance ===
 
 *Author*: [http://www.bowierocks.com Itscool - Al]
 
 *Description*: I created this Autokey script to do two things. 1) Generate a randomized shout message to gain assistance and 2) drink a manna pot from one of the bottom four inventory slots. For use with the flash client at [http://www.realmofthemadgod.com Realm of the Mad God].
 
-{{{from random import randrange
+{{{
+from random import randrange
 announcement = ["OMG","","DARN","","OH BOY","","COME HERE","","TP ME","","MESHUGANA","","OY",""]
 declaration = ["I could seriously use some help here","The devs must be crazy","How many minions did Oryx say he had to feed?","Dodge bullets? Sure. But this","MONSTERS"]
 expletives = ["!","!!","!!!","!!!!1","!!!1!","!!1!1!"]
@@ -92,16 +90,18 @@ output = str(mana)
 keyboard.send_key(output)
 #increment the mana
 mana = mana + 1
-store.set_value("mana",mana)}}}
-[#Scripts Back to Scripts List]
+store.set_value("mana",mana)
+}}}
+[ContributedScripts#Table_Of_Contents]
 
-= Ask For A Cleric =
+=== Ask For A Cleric ===
 
 *Author*: [http://www.bowierocks.com Itscool - Al]
 
 *Description*: I created this Autokey script will help you manage drinking health potions in the top four inventory slots. Additionally it’ll generate a random yell asking for some type of healing support. For use with the flash client at [http://www.realmofthemadgod.com Realm of the Mad God].
 
-{{{from random import randrange
+{{{
+from random import randrange
 announcement = ["HELP","","HP","","HEAL","","MEDIC","","DR. WHO","","1-800-PRIEST",""]
 declaration = ["I could use some professional help here","Anyone in the businesses of hp","Bring lots of that RED STUFF in a jar","I don't wanna die","Mommy","You can leave a msg at GHOSTBUSTERS","I'm going to meet the maker","Great, I'm another Father Dowling Mystery","Agatha Christi?! Posh","Should've listened to Momma","I don't want this chocolate","..."]
 expletives = ["!","!!","!!!","!!!!1","!!!1!","!!1!1!"]
@@ -132,16 +132,18 @@ output = str(pot)
 keyboard.send_key(output)
 #increment the pot
 pot = pot + 1
-store.set_value("pot",pot)}}}
-[#Scripts Back to Scripts List]
+store.set_value("pot",pot)
+}}}
+[ContributedScripts#Table_Of_Contents]
 
-= Gnome Screenshot =
+=== Gnome Screenshot ===
 
 *Author*: [http://groups.google.com/groups/profile?enc_user=gy_J_BYAAABLTVwIPyUi9oJFSRwGwC70o4cocwWvDVg2RHsu8f1bCg Dave]
 
 *Description*: The Autokey script created here will allow you to quickly screenshot your desktop while moving your mouse off to the right. Dave had originally submitted it to the group forums there and at least 4 of us helped him to modify it and make it faster.
 
-{{{#
+{{{
+#
 # replace ~/Downloads with the location of where you told gnome-screenshot to save the pic
 #
 system.exec_command("bash -c 'rm ~/Downloads/today.png'",False)
@@ -149,16 +151,18 @@ system.exec_command("gnome-screenshot -w", False)
 window.wait_for_exist("Save Screenshot", timeOut=5)
 system.exec_command("xte 'mousemove 725 399'", False)
 window.activate("Save Screenshot", switchDesktop=False)
-keyboard.send_keys("today")}}}
-[#Scripts Back to Scripts List]
+keyboard.send_keys("today")
+}}}
+[ContributedScripts#Table_Of_Contents]
 
-= Switch Or Start Firefox =
+=== Switch Or Start Firefox ===
 
 *Author*: Jack
 
 *Description*: this script switches to the Firefox window. if Firefox is not already running, the script starts it. i use similar scripts for the applications i use most.
 
-{{{#
+{{{
+#
 #start firefox or switch to firefox
 import subprocess
 command = ‘wmctrl -l’
@@ -169,16 +173,18 @@ if ‘Firefox’ in output:
 
 else:
     subprocess.Popen(["/usr/bin/firefox"])
-#}}}
-[#Scripts Back to Scripts List]
+#
+}}}
+[ContributedScripts#Table_Of_Contents]
 
-= RSS Zoomer =
+=== RSS Zoomer ===
 
 *Author*: Jack
 
 *Description*: several actions to go on the same key… i have this on this script sends ‘^+’ when in Firefox or Chromium to do a zoom in. when i’m reading RSS feeds in Akregator, it sends ‘=’ to move to the next unread item.
 
-{{{#
+{{{
+#
 
 winTitle = window.get_active_title()
 
@@ -198,16 +204,18 @@ else:
     output = ""
     keyboard.send_keys(output)
 
-#}}}
-[#Scripts Back to Scripts List]
+#
+}}}
+[ContributedScripts#Table_Of_Contents]
 
-= Move Active Window =
+=== Move Active Window ===
 
 *Author*: Jack
 
 *Description*: here are 4 tiny scripts to move the active window left, right, up, down. fwiw i have them on Super+AppropriateArrow.
 
-{{{#——————————————–#
+{{{
+#——————————————–#
 # move active window left
 thisWin = window.get_active_title()
 windetails = window.get_active_geometry() # returns tuple of: x, y, width, height
@@ -239,16 +247,18 @@ windetails = window.get_active_geometry() # returns tuple of: x, y, width, heigh
 oldY = windetails[1]
 newY=windetails[1] + 20
 window.resize_move(thisWin, xOrigin=-1, yOrigin=newY, width=-1, height=-1, matchClass=False)
-#——————————————–#}}}
-[#Scripts Back to Scripts List]
+#——————————————–#
+}}}
+[ContributedScripts#Table_Of_Contents]
 
-= Offline Print Queue =
+=== Offline Print Queue ===
 
 *Author*: [http://groups.google.com/groups/profile?enc_user=wEhtURIAAAD4aTgqVkoh5XFntZCWEVBLD1eZzMt9YX5JjiuRxhHx-A Joe]
 
 *Description*: Changes <ctrl>+p for Mozilla applications to print to a file in a special offline print queue using incremented file names, intended for use with duplexpr.
 
-{{{# print2file 
+{{{
+# print2file 
 import time 
 import os 
 ## Copyleft 2012/01/31 - JPmicrosystems GPL 
@@ -303,5 +313,6 @@ if len(output) < 2:
 ## complete the file name field in the print dialog 
 ## But don’t send an enter so the user can select 
 ## options before printing 
-keyboard.send_keys(output)}}}
-[#Scripts Back to Scripts List]
+keyboard.send_keys(output)
+}}}
+[ContributedScripts#Table_Of_Contents]
