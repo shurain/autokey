@@ -7,15 +7,15 @@ This page contains user contributed scripts to demonstrate the *advanced* capabi
 For specific details on the custom functions available to AutoKey scripts, see the [http://autokey.googlecode.com/svn/trunk/doc/scripting/index.html API reference].
 
 = Scripts =
-  #[#Choose_Browser_On_Link_Selection Choose Browser On Link Selection]
-  #[#Health_Potion_Drinker Health Potion Drinker]
-  #[#Ask_For_Assistance Ask For Assistance]
-  #[#Ask_For_A_Cleric Ask For A Cleric]
-  #[#Gnome_Screenshot Gnome Screenshot]
-  #[#Switch_Or_Start_Firefox Switch Or Start Firefox]
-  #[#RSS_Zoomer RSS Zoomer]
-  #[#Move_Active_Window Move Active Window]
-  #[#Offline_Print_Queue Offline Print Queue]
+  #[ContributedScripts#Choose_Browser_On_Link_Selection Choose Browser On Link Selection]
+  #[ContributedScripts#Health_Potion_Drinker Health Potion Drinker]
+  #[ContributedScripts#Ask_For_Assistance Ask For Assistance]
+  #[ContributedScripts#Ask_For_A_Cleric Ask For A Cleric]
+  #[ContributedScripts#Gnome_Screenshot Gnome Screenshot]
+  #[ContributedScripts#Switch_Or_Start_Firefox Switch Or Start Firefox]
+  #[ContributedScripts#RSS_Zoomer RSS Zoomer]
+  #[ContributedScripts#Move_Active_Window Move Active Window]
+  #[ContributedScripts#Offline_Print_Queue Offline Print Queue]
 
 = Choose Browser On Link Selection =
 
