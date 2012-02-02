@@ -7,7 +7,7 @@ This page contains user contributed scripts to demonstrate the *advanced* capabi
 For specific details on the custom functions available to AutoKey scripts, see the [http://autokey.googlecode.com/svn/trunk/doc/scripting/index.html API reference].
 
 = Scripts =
-  #[http://code.google.com/p/autokey/wiki/ContributedScripts#Choose_Browser_On_Link_Selection Choose Browser On Link Selection]
+  #[ContributedScripts#Choose_Browser_On_Link_Selection] Choose Browser On Link Selection]
   #[ContributedScripts#Health_Potion_Drinker Health Potion Drinker]
   #[ContributedScripts#Ask_For_Assistance Ask For Assistance]
   #[ContributedScripts#Ask_For_A_Cleric Ask For A Cleric]
