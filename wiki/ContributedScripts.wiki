@@ -24,7 +24,7 @@ if retCode == 0:
   system.exec_command(choice + " " + clipboard.get_selection())
 }}}
 
-[ContributedScripts#Table_Of_Contents]
+[http://code.google.com/p/autokey/wiki/ContributedScripts Table Of Content]
 
 === Health Potion Drinker ===
 
@@ -52,7 +52,7 @@ pot = pot + 1
 
 store.set_value(“heal”,pot)
 }}}
-[ContributedScripts#Table_Of_Contents]
+[http://code.google.com/p/autokey/wiki/ContributedScripts Table Of Content]
 
 === Ask For Assistance ===
 
@@ -93,13 +93,13 @@ keyboard.send_key(output)
 mana = mana + 1
 store.set_value("mana",mana)
 }}}
-[ContributedScripts#Table_Of_Contents]
+[http://code.google.com/p/autokey/wiki/ContributedScripts Table Of Content]
 
 === Ask For A Cleric ===
 
 *Author*: [http://www.bowierocks.com Itscool - Al]
 
-*Description*: I created this Autokey script will help you manage drinking health potions in the top four inventory slots. Additionally it’ll generate a random yell asking for some type of healing support. For use with the flash client at [http://www.realmofthemadgod.com Realm of the Mad God].
+*Description*: I created this Autokey script will help you manage drinking health potions in the top four inventory slots. Additionally `it’ll` generate a random yell asking for some type of healing support. For use with the flash client at [http://www.realmofthemadgod.com Realm of the Mad God].
 
 {{{
 from random import randrange
@@ -135,7 +135,7 @@ keyboard.send_key(output)
 pot = pot + 1
 store.set_value("pot",pot)
 }}}
-[ContributedScripts#Table_Of_Contents]
+[http://code.google.com/p/autokey/wiki/ContributedScripts Table Of Content]
 
 === Gnome Screenshot ===
 
@@ -154,7 +154,7 @@ system.exec_command("xte 'mousemove 725 399'", False)
 window.activate("Save Screenshot", switchDesktop=False)
 keyboard.send_keys("today")
 }}}
-[ContributedScripts#Table_Of_Contents]
+[http://code.google.com/p/autokey/wiki/ContributedScripts Table Of Content]
 
 === Switch Or Start Firefox ===
 
@@ -176,13 +176,13 @@ else:
     subprocess.Popen(["/usr/bin/firefox"])
 #
 }}}
-[ContributedScripts#Table_Of_Contents]
+[http://code.google.com/p/autokey/wiki/ContributedScripts Table Of Content]
 
 === RSS Zoomer ===
 
 *Author*: Jack
 
-*Description*: several actions to go on the same key… i have this on this script sends ‘^+’ when in Firefox or Chromium to do a zoom in. when i’m reading RSS feeds in Akregator, it sends ‘=’ to move to the next unread item.
+*Description*: several actions to go on the same key… i have this on this script sends `‘^+’` when in Firefox or Chromium to do a zoom in. when i`’`m reading RSS feeds in Akregator, it sends `‘=’` to move to the next unread item.
 
 {{{
 #
@@ -207,7 +207,7 @@ else:
 
 #
 }}}
-[ContributedScripts#Table_Of_Contents]
+[http://code.google.com/p/autokey/wiki/ContributedScripts Table Of Content]
 
 === Move Active Window ===
 
@@ -250,13 +250,13 @@ newY=windetails[1] + 20
 window.resize_move(thisWin, xOrigin=-1, yOrigin=newY, width=-1, height=-1, matchClass=False)
 #——————————————–#
 }}}
-[ContributedScripts#Table_Of_Contents]
+[http://code.google.com/p/autokey/wiki/ContributedScripts Table Of Content]
 
 === Offline Print Queue ===
 
 *Author*: [http://groups.google.com/groups/profile?enc_user=wEhtURIAAAD4aTgqVkoh5XFntZCWEVBLD1eZzMt9YX5JjiuRxhHx-A Joe]
 
-*Description*: Changes <ctrl>+p for Mozilla applications to print to a file in a special offline print queue using incremented file names, intended for use with duplexpr.
+*Description*: Changes `<ctrl>+p` for Mozilla applications to print to a file in a special offline print queue using incremented file names, intended for use with duplexpr.
 
 {{{
 # print2file 
@@ -316,4 +316,4 @@ if len(output) < 2:
 ## options before printing 
 keyboard.send_keys(output)
 }}}
-[ContributedScripts#Table_Of_Contents]
+[http://code.google.com/p/autokey/wiki/ContributedScripts Table Of Content]
