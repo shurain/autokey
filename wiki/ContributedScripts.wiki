@@ -336,8 +336,7 @@ engine.run_script("wrap_selection")
 try: 
     wrap 
 except NameError: 
-    dialog.info_dialog("Need at least one key to wrap selection 
-with.") 
+    dialog.info_dialog("Need at least one key to wrap selection with.") 
 try: 
     wrap_close 
 except NameError: 
