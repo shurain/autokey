@@ -1,4 +1,4 @@
-#summary !Autokey: Glossary, what it does for you and how it works.
+#summary Autokey: Glossary, what it does for you and how it works.
 #labels Featured
 
 <h1>!AutoKey: What it IS and What it Does</h1>
