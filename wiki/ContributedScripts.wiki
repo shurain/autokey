@@ -324,13 +324,18 @@ keyboard.send_keys(output)
 
 *Description*: Wrap selected text with one or two keys/sets of keys, or 
 output them if nothing's selected, and keep your current clipboard. 
-Can call it using, ahem, engine.run_script(description) then bind 
+Can call it using engine.run_script(description) then bind 
 whatever's calling it to something i.e. for round brackets: 
 
+*binder script*:
 {{{
 wrap = "<shift>+9" 
 wrap_close = "<shift>+0" 
-engine.run_script("wrap_selection") 
+engine.run_script("wrap_selection")
+}}}
+
+*script*: wrap_selection
+{{{
 # wrap_selection 
 # get keys 
 try: 
