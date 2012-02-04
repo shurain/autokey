@@ -216,40 +216,41 @@ else:
 
 *Description*: here are 4 tiny scripts to move the active window left, right, up, down. fwiw i have them on Super+AppropriateArrow.
 
+*Move Window Left*:
 {{{
-#——————————————–#
 # move active window left
 thisWin = window.get_active_title()
 windetails = window.get_active_geometry() # returns tuple of: x, y, width, height
 newX = windetails[0] - 40
 window.resize_move(thisWin, xOrigin=newX, yOrigin=-1, width=-1, height=-1, matchClass=False)
-#——————————————–#
+}}}
 
-#——————————————–#
+*Move Window Right*:
+{{{
 # move active window right
 thisWin = window.get_active_title()
 windetails = window.get_active_geometry() # returns tuple of: x, y, width, height
 newX = windetails[0] + 40
 window.resize_move(thisWin, xOrigin=newX, yOrigin=-1, width=-1, height=-1, matchClass=False)
-#——————————————–#
+}}}
 
-#——————————————–#
+*Move Window Up*:
+{{{
 # move active window up
 thisWin = window.get_active_title()
 windetails = window.get_active_geometry() # returns tuple of: x, y, width, height
 newY=windetails[1] - 80 # must bigger than approx 40, otherwise window moves down!
 window.resize_move(thisWin, xOrigin=-1, yOrigin=newY, width=-1, height=-1, matchClass=False)
-#——————————————–#
- 
+}}}
 
-#——————————————–#
+*Move Window Down*:
+{{{ 
 # move active window down
 thisWin = window.get_active_title()
 windetails = window.get_active_geometry() # returns tuple of: x, y, width, height
 oldY = windetails[1]
 newY=windetails[1] + 20
 window.resize_move(thisWin, xOrigin=-1, yOrigin=newY, width=-1, height=-1, matchClass=False)
-#——————————————–#
 }}}
 [http://code.google.com/p/autokey/wiki/ContributedScripts Table Of Content]
 
@@ -325,7 +326,11 @@ keyboard.send_keys(output)
 *Description*: Wrap selected text with one or two keys/sets of keys, or 
 output them if nothing's selected, and keep your current clipboard. 
 Can call it using engine.run_script(description) then bind 
-whatever's calling it to something i.e. for round brackets: 
+whatever's calling it to something.
+
+*Real World Use*: Highlight a load of text and that you need wrapped in something. Possibly say quotes, brackets, braces, parens, pipes, asterisks etc ... That is why the script is in two parts so you can have multiple assignments to the same engine.
+
+*Alternate Use*: Wrapping a load of text with words or phrases like you would use in html, xml, etc ... where _wrap_ could be `<div>` and _`wrap_close`_ could be `</div>`.
 
 *binder script*:
 {{{
