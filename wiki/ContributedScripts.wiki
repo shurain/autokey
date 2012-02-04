@@ -318,3 +318,50 @@ if len(output) < 2:
 keyboard.send_keys(output)
 }}}
 [http://code.google.com/p/autokey/wiki/ContributedScripts Table Of Content]
+=== Key Wrapper ===
+
+*Author*: [http://groups.google.com/groups/profile?enc_user=x6tfARIAAAAifj82FffFIj7Xx_wp_F3B8rhlH0Pnl47z4AZhN98BFg tpower21]
+
+*Description*: Wrap selected text with one or two keys/sets of keys, or 
+output them if nothing's selected, and keep your current clipboard. 
+Can call it using, ahem, engine.run_script(description) then bind 
+whatever's calling it to something i.e. for round brackets: 
+
+{{{
+wrap = "<shift>+9" 
+wrap_close = "<shift>+0" 
+engine.run_script("wrap_selection") 
+# wrap_selection 
+# get keys 
+try: 
+    wrap 
+except NameError: 
+    dialog.info_dialog("Need at least one key to wrap selection 
+with.") 
+try: 
+    wrap_close 
+except NameError: 
+    wrap_close = wrap 
+# below needed to get working in some apps, otherwise 
+clipboard.get_selection() quicker/better 
+# get clipboard/selection 
+try: 
+    clip_board = clipboard.get_clipboard() 
+except: 
+    clip_board = "" 
+keyboard.send_keys("<ctrl>+x") 
+time.sleep(0.01) 
+try: 
+    selection = clipboard.get_clipboard() 
+except: 
+    selection = "" 
+# clipboard won't update if selection empty 
+if clip_board == selection: 
+    selection = "" # problem if clipboard and selection are the same 
+and not empty, but not the end of the world 
+# wrap and clean up 
+keyboard.send_keys(wrap+selection+wrap_close+"<left>") 
+clipboard.fill_clipboard(clip_board) 
+del clip_board, selection, wrap, wrap_close 
+}}}
+[http://code.google.com/p/autokey/wiki/ContributedScripts Table Of Content]
