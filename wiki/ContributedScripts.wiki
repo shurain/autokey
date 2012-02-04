@@ -343,7 +343,7 @@ try:
 except NameError: 
     wrap_close = wrap 
 # below needed to get working in some apps, otherwise 
-clipboard.get_selection() quicker/better 
+# clipboard.get_selection() quicker/better 
 # get clipboard/selection 
 try: 
     clip_board = clipboard.get_clipboard() 
@@ -358,7 +358,7 @@ except:
 # clipboard won't update if selection empty 
 if clip_board == selection: 
     selection = "" # problem if clipboard and selection are the same 
-and not empty, but not the end of the world 
+# and not empty, but not the end of the world 
 # wrap and clean up 
 keyboard.send_keys(wrap+selection+wrap_close+"<left>") 
 clipboard.fill_clipboard(clip_board) 
