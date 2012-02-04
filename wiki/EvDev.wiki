@@ -1,0 +1,10 @@
+#summary Event Device
+
+= Introduction =
+
+*evdev* (for event device) is a component of the Linux kernel for handling input (from keyboards, mice, joysticks, etc.)
+
+
+= More Information =
+
+[http://en.wikipedia.org/wiki/Evdev EvDev at WikiPedia.org]
