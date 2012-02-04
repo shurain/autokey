@@ -3,9 +3,9 @@
 
 = Introduction =
 
-This page contains some very basic script examples to demonstrate the capabilities of AutoKey's scripting service.
+This page contains some very basic script examples to demonstrate the capabilities of !AutoKey's scripting service.
 
-For specific details on the custom functions available to AutoKey scripts, see the [http://autokey.googlecode.com/svn/trunk/doc/scripting/index.html API reference].
+For specific details on the custom functions available to !AutoKey scripts, see the [http://autokey.googlecode.com/svn/trunk/doc/scripting/index.html API reference].
 
 = Scripts =
 
