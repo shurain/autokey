@@ -373,7 +373,10 @@ if clip_board == selection:
     selection = "" # problem if clipboard and selection are the same 
 # and not empty, but not the end of the world 
 # wrap and clean up 
-keyboard.send_keys(wrap+selection+wrap_close+"<left>") 
+keyboard.send_keys(wrap+selection+wrap_close+"<left>")
+#tpower21 added the following two lines on February 7 2012
+for s in selection:
+   keyboard.send_keys("<shift>+<left>") 
 clipboard.fill_clipboard(clip_board) 
 del clip_board, selection, wrap, wrap_close 
 }}}
