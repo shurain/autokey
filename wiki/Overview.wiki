@@ -26,11 +26,11 @@
 
 <h3>Why Would You Use !AutoKey And What Does It Do For You?</h3>
 
-<p>!AutoKey can be a huge time saver, energy saver and productivity booster as well as reduce the stress on your arms and hands.</p>
+<p>!AutoKey can be a huge time saver, energy saver and productivity booster and can also reduce the stress on your arms and hands.</p>
 <p><b>Some examples:</b></p>
 <p>There are certain things you type over and over; your address, your company name or your custom signature.  !AutoKey's abbreviations can automatically expand a few characters into any of your commonly used text blocks.  For programmers, !AutoKey's text insertion features can let you easily insert code tags, dividers, etc. at the cursor position.</p>
 <p>If you use database, CAD/CAM, engineering or scientific software that require complex key combinations, !AutoKey can be configured to send commands that will activate those features with a single keystroke.</p>
-<p> Instead of just inserting text, a script can be used to manipulate several different running programs, transfer text between them, start and close them as well as send keyboard and mouse output to them.</p>
+<p> Instead of just inserting text, a script can be used to manipulate several different running programs, transfer text between them, start and close them as well as send keyboard and mouse input to them.</p>
 <p> !AutoKey works across all applications. Any phrase, script or abbreviation can be used in multiple applications.  This means you do not have to configure all the different applications that you use--you can do it once in !AutoKey and it works for all your applications.</p>
 <p> !AutoKey is very useful if you write or edit business documents, novels, documentation, articles, web blogs, programs or fill out a lot of forms.</p>
 
@@ -38,6 +38,6 @@
 
 <p>It is a trigger or selection activated,  automation utility program for Linux and X11.  When a trigger is detected by !Autokey, one of three things can happen; a script is activated, text is inserted at the cursor position or a pop-up menu is displayed allowing a script or phrase to be activated by selecting it.</p>
 
-<p>!AutoKey scripts can literally do anything that can be coded as a Python program. Python scripts are user created or shared between users. !AutoKey includes a range of sample Python scripts, and there are countless Python scripting resources on-line for learning how to write scripts.</p>
+<p>!AutoKey scripts can literally do almost anything that can be coded as a Python program. Python scripts are user created and can be shared between users. !AutoKey includes a range of sample Python scripts, and there are countless Python scripting resources on-line for learning how to write scripts.</p>
 
 <p>The core part of !AutoKey works by sending and receiving keyboard events via the X server. It supports multiple ways of communicating with X and as such should --in theory-- work with any Western keyboard layout. (Problems are known to exist with Russian/Mandarin/Japanese languages)</p>
