@@ -2,7 +2,7 @@
 
 = Introduction =
 
-AutoKey is a macro and automation utility powered by Python and GTK that allows users of Debian based distributions primarily Ubuntu Linux to eliminate the mundane nature of repetitious or tedious work.
+AutoKey is a macro and automation utility powered by Python and GTK that allows users of Linux to eliminate the mundane nature of repetitious or tedious work.
 
 
 = Details =
