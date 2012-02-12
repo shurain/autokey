@@ -5,14 +5,14 @@
 [http://www.wordpress.org/ WordPress] is web software you can use to create a beautiful website or blog. WordPress is an Open Source project, which means there are hundreds of people all over the world working on it.
 
 
-= Details =
+== Details ==
 
 The core software is built by hundreds of community volunteers, and when you’re ready for more there are thousands of plugins and themes available to transform your site into almost anything you can imagine. Over 60 million people have chosen WordPress to power the place on the web they call “home”.
 
-= Call to Arms =
+=== Call to Arms ===
 
 Do you have a website or blog of any kind on which you have blogged or written about AutoKey? Are collecting scripts on another site for AutoKey but would like to get them listed here? If so please drop us a line in the comments and we'll add you to the appropriate section.
 
-= External Sites =
+==== External Sites ====
 
 *[http://bowierocks.com/collections/computing/autokey-scripts-for-linux/ BowieRocks.com AutoKey Scripts]
