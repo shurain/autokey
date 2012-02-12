@@ -1,0 +1,10 @@
+#summary AutoKey can be found at [http://code.google.com/p/autokey]
+
+= Introduction =
+
+AutoKey is a macro and automation utility powered by Python and GTK that allows users of Debian based distributions primarily Ubuntu Linux to eliminate the mundane nature of repetitious or tedious work.
+
+
+= Details =
+
+For more information please go to our home page at [http://code.google.com/p/autokey].
