@@ -1,4 +1,4 @@
-#summary AutoKey can be found at [http://code.google.com/p/autokey]
+#summary AutoKey Desktop automation utility for Linux and X11
 
 = Introduction =
 
