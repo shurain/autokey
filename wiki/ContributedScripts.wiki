@@ -323,6 +323,7 @@ if len(output) < 2:
 keyboard.send_keys(output)
 }}}
 [http://code.google.com/p/autokey/wiki/ContributedScripts Table Of Content]
+
 === Key Wrapper ===
 
 *Author*: [http://groups.google.com/groups/profile?enc_user=x6tfARIAAAAifj82FffFIj7Xx_wp_F3B8rhlH0Pnl47z4AZhN98BFg tpower21]
@@ -386,7 +387,7 @@ del clip_board, selection, wrap, wrap_close
 
 *Author*: [http://www.bowierocks.com Itscool - Al]
 
-*Description*: This AutoKey script takes a selected entry in your WordPress article that may or may not contain parens "()", extracts the number enclosed and converts that to a link to the concordance at eliyah.com. The number is assumed to be a HEBREW lexicon indicator as pertains to the Strong's Concordance that is keyed to the New King James Bible. I have my hot-key combo set to "<alt>+<shift>+h". With no further ado I present the following Python script for AutoKey that does what I claim.
+*Description*: This AutoKey script takes a selected entry in your WordPress article that may or may not contain parens "()", extracts the number enclosed and converts that to a link to the concordance at eliyah.com. The number is assumed to be a HEBREW lexicon indicator as pertains to the Strong's Concordance that is keyed to the New King James Bible. I have my hot-key combo set to "`<alt>+<shift>+h`". With no further ado I present the following Python script for AutoKey that does what I claim.
 
 {{{
 selection = clipboard.get_selection()
