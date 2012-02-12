@@ -381,3 +381,26 @@ clipboard.fill_clipboard(clip_board)
 del clip_board, selection, wrap, wrap_close 
 }}}
 [http://code.google.com/p/autokey/wiki/ContributedScripts Table Of Content]
+
+=== WordPress Hebrew Concordance Linker ===
+
+*Author*: [http://www.bowierocks.com Itscool - Al]
+
+*Description*: This AutoKey script takes a selected entry in your WordPress article that may or may not contain parens "()", extracts the number enclosed and converts that to a link to the concordance at eliyah.com. The number is assumed to be a HEBREW lexicon indicator as pertains to the Strong's Concordance that is keyed to the New King James Bible. I have my hot-key combo set to "<alt>+<shift>+h". With no further ado I present the following Python script for AutoKey that does what I claim.
+
+{{{
+selection = clipboard.get_selection()
+if selection[0] == "(":
+    selection = selection[1:-1]
+ 
+if selection[-1] == ")":
+    selection = selection[0:-2]
+    
+keyboard.send_keys("<alt>+<shift>+a")
+ 
+keyboard.send_keys("http://www.eliyah.com/cgi-bin/strongs.cgi?file=hebrewlexicon&isindex=%s" % selection)
+keyboard.send_keys("<tab>")
+keyboard.send_keys("Strong's Concordance HEBREW %s" % selection)
+keyboard.send_keys("<enter>")
+}}}
+[http://code.google.com/p/autokey/wiki/ContributedScripts Table Of Content]
