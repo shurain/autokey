@@ -1,5 +1,4 @@
 #summary Beginner's guide to AutoKey
-#labels Featured
 
 == Introduction ==
 This page contains a basic introduction on how to use !AutoKey to create abbreviations and hotkeys. Contributed by user marshag63.
