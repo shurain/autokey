@@ -13,7 +13,7 @@ Note that if you installed !AutoKey from a .deb or using apt-get, these dependen
 === What is the license of !AutoKey? ===
 !AutoKey is published under GNU GPL v3 license.
 
-=== Does !AutoKey work with scripts which were written with the popular AutoHotKey Windows application? ===
+=== Does !AutoKey work with scripts which were written with the popular !AutoHotKey Windows application? ===
 No. !AutoKey's built-in Python scripting is arguably much more powerful than the AHK language and makes it possible to do many of the things that AutoHotKey scripts can do on Windows, in addition to some things AHK doesn't support.
 
 === Is !AutoKey available on Microsoft Windows? ===
