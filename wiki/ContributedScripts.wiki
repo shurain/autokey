@@ -217,7 +217,7 @@ else:
 
 *Author*: Jack
 
-*Description*: here are 4 tiny scripts to move the active window left, right, up, down. fwiw i have them on Super+AppropriateArrow.
+*Description*: here are 4 tiny scripts to move the active window left, right, up, down. fwiw i have them on !Super+AppropriateArrow.
 
 *Move Window Left*:
 {{{
@@ -382,11 +382,11 @@ del clip_board, selection, wrap, wrap_close
 }}}
 [http://code.google.com/p/autokey/wiki/ContributedScripts Table Of Content]
 
-=== WordPress Hebrew Concordance Linker ===
+=== !WordPress Hebrew Concordance Linker ===
 
 *Author*: [http://www.bowierocks.com Itscool - Al]
 
-*Description*: This AutoKey script takes a selected entry in your WordPress article that may or may not contain parens "()", extracts the number enclosed and converts that to a link to the concordance at eliyah.com. The number is assumed to be a HEBREW lexicon indicator as pertains to the Strong's Concordance that is keyed to the New King James Bible. I have my hot-key combo set to "`<alt>+<shift>+h`". With no further ado I present the following Python script for AutoKey that does what I claim.
+*Description*: This !AutoKey script takes a selected entry in your !WordPress article that may or may not contain parens "()", extracts the number enclosed and converts that to a link to the concordance at eliyah.com. The number is assumed to be a HEBREW lexicon indicator as pertains to the Strong's Concordance that is keyed to the New King James Bible. I have my hot-key combo set to "`<alt>+<shift>+h`". With no further ado I present the following Python script for !AutoKey that does what I claim.
 
 {{{
 selection = clipboard.get_selection()
