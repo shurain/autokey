@@ -264,62 +264,98 @@ window.resize_move(thisWin, xOrigin=-1, yOrigin=newY, width=-1, height=-1, match
 *Description*: Changes `<ctrl>+p` for Mozilla applications to print to a file in a special offline print queue using incremented file names, intended for use with duplexpr.
 
 {{{
-# print2file 
-import time 
-import os 
-## Copyleft 2012/01/31 - JPmicrosystems GPL 
-## Change <ctrl>+p for Firefox and Thunderbird 
-## to print to file in a special print queue using 
-## numbered file names, 01, 02, … so the print jobs stay in order 
-## Intended for use with duplexpr 
-## http://sourceforge.net/projects/duplexpr/ 
-## User must manually create print queue folder (~/pq) 
-## Hotkey <ctrl>+p 
-## Window Filter .*Mozilla.* 
-## Changes <ctrl>+p to 
-## Print to file and looks at the print queue (~/pq) 
-## Finds the last print file number and increments it by one 
-## Doesn’t send final <Enter> so additional options like Print Selection 
-## can be set by the user 
-##Fails if Loading file to print takes longer than the second delay 
-## Open the File menu 
-## (can’t use <ctrl>+p because that’s the hotkey) 
-keyboard.send_keys("<alt>+f") 
-time.sleep(1.0) 
-## Select Print 
-keyboard.send_keys("p") 
-time.sleep(2.0) 
-## tab to the printer selection list, then to the top of the list 
-## which is the Print to File selection 
-keyboard.send_keys("<tab><home>") 
-time.sleep(2.0) 
-## tab to the file name field and enter the print queue directory path 
-keyboard.send_keys("<tab>pq/") 
-## Set path to print queue 
-path = os.getenv("HOME") + '/pq' 
-## Get all the files in the print queue in a list 
-dirList=os.listdir(path) 
-## And sort it in reverse order 
-## So the largest numbered file is first 
-dirList.sort(reverse=True) 
-## If there aren't any files then 
-## Set last file to 0 
-## else, set it to the last file 
-if len(dirList) == 0: 
-   output = '0' 
-else: 
-   output = dirList[0] 
-## Increment the file number 
-output = str(int(output) + 1) 
-## If it's less than 2 characters long, 
-## Left pad it with a zero 
-## To maintain the sorting order 
-if len(output) < 2: 
-   output = '0' + output 
-## complete the file name field in the print dialog 
-## But don't send an enter so the user can select 
-## options before printing 
+# print2file
+
+import time
+import os
+
+## Copyleft 2012/02/27 - JPmicrosystems GPL
+## Change <ctrl>+p for Firefox and Thunderbird
+## to print to file in a special print queue using
+## numbered file names, 01, 02, ... so the print jobs stay in order
+## Intended for use with duplexpr
+## http://sourceforge.net/projects/duplexpr/
+## User must manually create print queue folder (~/pq)
+## and set all *.print_to_filename variables in prefs.js (about:config)
+## to path to print queue/01.ps
+## e.g. /home/shelelia/pq/01.ps
+
+## Hotkey <ctrl>+p
+## Window Filter .*Mozilla.*
+
+## Changes <ctrl>+p to
+## Print to file and looks at the print queue (~/pq)
+## Finds the last print file number and increments it by one
+## Doesn't send final <Enter> so additional options like Print Selection
+## can be set by the user
+##Fails if Loading file to print takes longer than the second delay
+
+def filenum ():
+    ## Gets next file number
+    ## Set path to print queue
+    path = os.getenv("HOME") + '/pq'
+    ## Get all the files in the print queue in a list
+    ## Handle filesystem error
+    try:
+        dirlist=os.listdir(path)
+    except:
+        return "EE"
+
+    ## And sort it in reverse order
+    ## So the largest numbered file is first
+    dirlist.sort(reverse=True)
+
+    ## If there aren't any files then
+    ## Set last file to 0
+    ## else, set it to the last file with a valid number
+    ## Defend script against non-numeric file names
+    ## go down the reverse sorted list until a numeric one is found
+    fn=""
+    if len(dirlist) == 0:
+      fn = "00"
+    else:
+        files = len(dirlist)
+        i = 0
+        while (i < files) and (fn == ""):
+            name = dirlist[i]
+            if name.isdigit():
+                fn = str(int(name) + 1)
+            i += 1
+
+    if fn == "":
+      fn = "01"
+
+    ## If it's less than 2 characters long,
+    ## Left pad it with a zero
+    ## To maintain the sorting order
+    if len(fn) < 2:
+      fn = '0' + fn
+
+    return fn
+
+
+## Open the File menu
+## (can't use <ctrl>+p because that's the hotkey)
+keyboard.send_keys("<alt>+f")
+time.sleep(1.0)
+## Select Print
+keyboard.send_keys("p")
+time.sleep(2.0)
+## tab to the printer selection list, then to the top of the list
+## which is the Print to File selection
+keyboard.send_keys("<tab><home>")
+time.sleep(2.0)
+## tab to the file name field and enter the print queue directory path
+keyboard.send_keys("<tab>")
+
+output = filenum()
+
+## complete the file name field in the print dialog
+## But don't send an enter so the user can select
+## options before printing
 keyboard.send_keys(output)
+
+
 }}}
 [http://code.google.com/p/autokey/wiki/ContributedScripts Table Of Content]
 
